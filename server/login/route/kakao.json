@@ -1,0 +1,5 @@
+{
+  "clientID": "7f7f298e638198fd29016797ca442759",
+  "clientSecret": "",
+  "callbackURL": "/auth/kakao/callback"
+ }

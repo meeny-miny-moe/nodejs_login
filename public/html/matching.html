@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/matching.css" />
+    <script type="text/javascript" src="../js/move.js"></script>
+    <script src="../js/matching.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/5b7a7cfcb5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>matching page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar_logo"> &#127800;Blooming </a>
+
+      <!--<div class="navbar_side">
+        <ul class="navbar_menu">
+          <li><input type="button" value="매칭" id="matching" /></li>
+          <li><input type="button" value="마이페이지" id="my" /></li>
+          <li><input type="button" value="로그인" id="login" /></li>
+        </ul>
+      </div>-->
+
+      <a href="#" class="navbar_togglebtn">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </nav>
+
+    <main class="content">
+      <!-- 이름 -->
+      <!-- <div class="inform">
+        <div class="label label_name">이름</div>
+        <div class="form_name">
+          <input
+            type="text"
+            id="nameInput"
+            class="form_nameInput"
+            name="name"
+            required
+            placeholder="이름을 입력해주세요"
+          />
+        </div>
+      </div> -->
+      <!-- 성별 -->
+      <!-- <div class="inform">
+        <div class="label label_gender">성별</div>
+        <div class="form_gender">
+          <input type="radio" name="gender" value="woman" /> 여성<br />
+          <input type="radio" name="gender" value="man" /> 남성<br />
+        </div>
+      </div> -->
+      <!-- mbti -->
+      <!-- <div class="inform">
+        <div class="label label_mbti">나의 MBTI</div>
+        <div class="form_mbti">
+          <select name="my_mbti" class="select_mbti" required>
+            <option selected disabled value>MBTI</option>
+            <option value="1">INTJ</option>
+            <option value="2">INTP</option>
+            <option value="3">ENTJ</option>
+            <option value="4">ENTP</option>
+            <option value="5">INFJ</option>
+            <option value="6">INFP</option>
+            <option value="7">ENFJ</option>
+            <option value="8">ENFP</option>
+            <option value="9">ISTJ</option>
+            <option value="10">ISFJ</option>
+            <option value="11">ESTJ</option>
+            <option value="12">ESFJ</option>
+            <option value="13">ISTP</option>
+            <option value="14">ISFP</option>
+            <option value="15">ESTP</option>
+            <option value="16">ESFP</option>
+          </select>
+        </div>
+      </div> -->
+      <!-- 나의 성격 -->
+      <div class="inform">
+        <div class="label label_myPersonality">나의 성격</div>
+        <ol class="form_myPersonality">
+          <li>
+            <div>
+              <p>주말에 주로</p>
+            </div>
+            <ul>
+              <a id="my_01" name = "1" onclick="checkMy1(this)">
+                <li>친구를 만난다</li>
+              </a>
+              <a id="my_01" name = "2" onclick="checkMy1(this)">
+                <li>집에서 쉰다</li>
+              </a>
+            </ul>
+          </li>
+
+          <li>
+            <div>
+              <p>문자 vs 전화</p>
+            </div>
+            <ul>
+              <a id="my_02" name = "1" onclick="checkMy2(this)">
+                <li>문자</li>
+              </a>
+              <a id="my_02" name = "2" onclick="checkMy2(this)">
+                <li>전화</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>성격이</p>
+            </div>
+            <ul>
+              <a id="my_03" name = "1" onclick="checkMy3(this)">
+                <li>급하다</li>
+              </a>
+              <a id="my_03" name = "2" onclick="checkMy3(this)">
+                <li>느긋하다</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>여행을 간다면</p>
+            </div>
+            <ul>
+              <a id="my_04" name = "1" onclick="checkMy4(this)">
+                <li>즉흥 여행</li>
+              </a>
+              <a id="my_04" name = "2" onclick="checkMy4(this)">
+                <li>계획 여행</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>동아리에 들어간다면</p>
+            </div>
+            <ul>
+              <a id="my_05" name = "1" onclick="checkMy5(this)">
+                <li>여행 동아리</li>
+              </a>
+              <a id="my_05" name = "2" onclick="checkMy5(this)">
+                <li>창작 동아리</li>
+              </a>
+              <a id="my_05" name = "3" onclick="checkMy5(this)">
+                <li>자기계발 동아리</li>
+              </a>
+              <a id="my_05" name = "4" onclick="checkMy5(this)">
+                <li>취미에 맞는 동아리</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>집에 친구가 오는 것이</p>
+            </div>
+            <ul>
+              <a id="my_06" name = "1" onclick="checkMy6(this)">
+                <li>좋다</li>
+              </a>
+              <a id="my_06" name = "2" onclick="checkMy6(this)">
+                <li>싫다</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>영화를 본다면</p>
+            </div>
+            <ul>
+              <a id="my_07" name = "1" onclick="checkMy7(this)">
+                <li>액션</li>
+              </a>
+              <a id="my_07" name = "2" onclick="checkMy7(this)">
+                <li>로맨스 / 가족</li>
+              </a>
+              <a id="my_07" name = "3" onclick="checkMy7(this)">
+                <li>공포</li>
+              </a>
+              <a id="my_07" name = "4" onclick="checkMy7(this)">
+                <li>판타지 / SF</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>나의 취미생활은</p>
+            </div>
+            <ul>
+              <a id="my_08" name = "1" onclick="checkMy8(this)">
+                <li>게임 같은 흥미 위주 활동</li>
+              </a>
+              <a id="my_08" name = "2" onclick="checkMy8(this)">
+                <li>운동 같은 동적인 활동</li>
+              </a>
+              <a id="my_08" name = "3" onclick="checkMy8(this)">
+                <li>독서 같은 정적인 활동</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>친구와 만나기로 약속했다면</p>
+            </div>
+            <ul>
+              <a id="my_09" name = "1" onclick="checkMy9(this)">
+                <li>약속시간 15분(혹은 그 이상) 전에 도착</li>
+              </a>
+              <a id="my_09" name = "2" onclick="checkMy9(this)">
+                <li>약속 시간 5~10분 전에 도착</li>
+              </a>
+              <a id="my_09" name = "3" onclick="checkMy9(this)">
+                <li>약속 시간 정각에 도착</li>
+              </a>
+              <a id="my_09" name = "4" onclick="checkMy9(this)">
+                <li>약속 시간 5~10분 지각</li>
+              </a>
+              <a id="my_09" name = "5" onclick="checkMy9(this)">
+                <li>약속 시간 15분(혹은 그 이상) 지각</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>좋아하는 스타일은</p>
+            </div>
+            <ul>
+              <a id="my_10" name = "1" onclick="checkMy10(this)">
+                <li>편하고 심플한 옷</li>
+              </a>
+              <a id="my_10" name = "2" onclick="checkMy10(this)">
+                <li>단정하고 깔끔한 옷</li>
+              </a>
+              <a id="my_10" name = "3" onclick="checkMy10(this)">
+                <li>무난하지만 포인트 있는 옷</li>
+              </a>
+              <a id="my_10" name = "4" onclick="checkMy10(this)">
+                <li>화려하고 개성 있는 옷</li>
+              </a>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <!-- 원하는 상대의 성격 -->
+      <div class="inform">
+        <div class="label label_myPersonality">원하는 상대 성격</div>
+        <ol class="form_myPersonality">
+          <li>
+            <div>
+              <p>주말에 주로</p>
+            </div>
+            <ul>
+              <a id="other_01" name = "1" onclick="checkOther1(this)">
+                <li>친구를 만난다</li>
+              </a>
+              <a id="other_01" name = "2" onclick="checkOther1(this)">
+                <li>집에서 쉰다</li>
+              </a>
+            </ul>
+          </li>
+
+          <li>
+            <div>
+              <p>문자 vs 전화</p>
+            </div>
+            <ul>
+              <a id="other_02" name = "1" onclick="checkOther2(this)">
+                <li>문자</li>
+              </a>
+              <a id="other_02" name = "2" onclick="checkOther2(this)">
+                <li>전화</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>성격이</p>
+            </div>
+            <ul>
+              <a id="other_03" name = "1" onclick="checkOther3(this)">
+                <li>급하다</li>
+              </a>
+              <a id="other_03" name = "2" onclick="checkOther3(this)">
+                <li>느긋하다</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>여행을 간다면</p>
+            </div>
+            <ul>
+              <a id="other_04" name = "1" onclick="checkOther4(this)">
+                <li>즉흥 여행</li>
+              </a>
+              <a id="other_04" name = "2" onclick="checkOther4(this)">
+                <li>계획 여행</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>동아리에 들어간다면</p>
+            </div>
+            <ul>
+              <a id="other_05" name = "1" onclick="checkOther5(this)">
+                <li>여행 동아리</li>
+              </a>
+              <a id="other_05" name = "2" onclick="checkOther5(this)">
+                <li>창작 동아리</li>
+              </a>
+              <a id="other_05" name = "3" onclick="checkOther5(this)">
+                <li>자기계발 동아리</li>
+              </a>
+              <a id="other_05" name = "4" onclick="checkOther5(this)">
+                <li>취미에 맞는 동아리</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>집에 친구가 오는 것이</p>
+            </div>
+            <ul>
+              <a id="other_06" name = "1" onclick="checkOther6(this)">
+                <li>좋다</li>
+              </a>
+              <a id="other_06" name = "2" onclick="checkOther6(this)">
+                <li>싫다</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>영화를 본다면</p>
+            </div>
+            <ul>
+              <a id="other_07" name = "1" onclick="checkOther7(this)">
+                <li>액션</li>
+              </a>
+              <a id="other_07" name = "2" onclick="checkOther7(this)">
+                <li>로맨스 / 가족</li>
+              </a>
+              <a id="other_07" name = "3" onclick="checkOther7(this)">
+                <li>공포</li>
+              </a>
+              <a id="other_07" name = "4" onclick="checkOther7(this)">
+                <li>판타지 / SF</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>나의 취미생활은</p>
+            </div>
+            <ul>
+              <a id="other_08" name = "1" onclick="checkOther8(this)">
+                <li>게임 같은 흥미 위주 활동</li>
+              </a>
+              <a id="other_08" name = "2" onclick="checkOther8(this)">
+                <li>운동 같은 동적인 활동</li>
+              </a>
+              <a id="other_08" name = "3" onclick="checkOther8(this)">
+                <li>독서 같은 정적인 활동</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>친구와 만나기로 약속했다면</p>
+            </div>
+            <ul>
+              <a id="other_09" name = "1" onclick="checkOther9(this)">
+                <li>약속시간 15분(혹은 그 이상) 전에 도착</li>
+              </a>
+              <a id="other_09" name = "2" onclick="checkOther9(this)">
+                <li>약속 시간 5~10분 전에 도착</li>
+              </a>
+              <a id="other_09" name = "3" onclick="checkOther9(this)">
+                <li>약속 시간 정각에 도착</li>
+              </a>
+              <a id="other_09" name = "4" onclick="checkOther9(this)">
+                <li>약속 시간 5~10분 지각</li>
+              </a>
+              <a id="other_09" name = "5" onclick="checkOther9(this)">
+                <li>약속 시간 15분(혹은 그 이상) 지각</li>
+              </a>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <p>좋아하는 스타일은</p>
+            </div>
+            <ul>
+              <a id="other_10" name="1" onclick="checkOther10(this)">
+                <li>편하고 심플한 옷</li>
+              </a>
+              <a id="other_10" name="2"  onclick="checkOther10(this)">
+                <li>단정하고 깔끔한 옷</li>
+              </a>
+              <a id="other_10" name="3"  onclick="checkOther10(this)">
+                <li>무난하지만 포인트 있는 옷</li>
+              </a>
+              <a id="other_10" name="4"  onclick="checkOther10(this)">
+                <li>화려하고 개성 있는 옷</li>
+              </a>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div class="submit">
+        <button type="button" id="submit_matching">제출</button>
+      </div>
+      <!-- <form class="" action="/user/personality" method="post">
+        <input type="submit" name="" value="테스트 제출">
+      </form> -->
+    </main>
+
+    <footer class="footer">
+      <div class="column">©WAP_WEB3</div>
+    </footer>
+  </body>
+</html>

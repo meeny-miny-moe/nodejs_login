@@ -1,0 +1,267 @@
+:root {
+  --text-color: #362121;
+  --background-color: #fff;
+  --primary-color: #ded0f2;
+  --primary-color-ch: #baa5da;
+  --light-blue-color: #91aaf2;
+  --dark-blue-color: #6b98f2;
+  --light-color: #f2b5a7;
+  --dark-color: #f28d8d;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+}
+
+ol {
+  padding-inline-start: 0;
+  margin: 1rem 0;
+  list-style: none;
+}
+
+ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0 0;
+}
+
+ol li {
+  border-bottom: 1px solid gray;
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--dark-color);
+  padding: 0.5rem 0.8rem;
+}
+
+.navbar_side {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+.navbar_logo {
+  font-size: 1.5rem;
+  color: white;
+  width: 100%;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 0.5rem 0.8rem;
+}
+
+.navbar_menu input {
+  all: unset;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar_togglebtn {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar_togglebtn {
+    display: block;
+  }
+
+  .navbar_side {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar_menu {
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+  }
+
+  .navbar_menu li {
+    padding-left: 0;
+  }
+
+  .navbar_side.active {
+    display: flex;
+  }
+}
+
+.footer {
+  padding: 2rem 15px;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.85);
+  min-height: 10rem;
+  max-width: 600px;
+}
+
+.column {
+  text-align: left;
+  float: left;
+}
+
+.content {
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inform {
+  padding-top: 1.5rem;
+}
+
+.label {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.form_name {
+  display: block;
+}
+
+#nameInput {
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.8rem 0;
+  border-width: 3px;
+  color: black;
+}
+
+.form_nameInput {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border: 1px solid gray;
+}
+
+/* 컬러팔레트 바꾸기 */
+.form_nameInput:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: var(--light-blue-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+  /* box-shadow: 0 0 0 0.2rem var(--dark-blue-color/25%); */
+}
+
+.form_gender {
+  font-size: 1.2rem;
+}
+
+.select_mbti {
+  display: block;
+  width: 100%;
+
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-width: 3px;
+  height: calc(1.5em + 1rem + 2px);
+}
+
+/* 컬러팔레트 바꾸기 */
+.select_mbti:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.content ul li {
+  background: white;
+  margin: 0.25rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 3px solid gray;
+}
+
+.inform ul li:hover {
+  color: #495057;
+  background-color: #fff;
+  border-color: var(--dark-blue-color);
+  outline: 0;
+}
+
+.select li {
+  border: 3px solid var(--light-blue-color) !important;
+  color: var(--dark-blue-color) !important;
+}
+
+.submit {
+  margin-top: 2rem;
+}
+
+#submit_matching {
+  padding: 0.5rem 8rem 0.5rem 8rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+
+  color: white;
+  background-color: var(--dark-blue-color);
+  border-color: var(--light-blue-color);
+
+  display: block;
+  justify-content: center;
+  font-weight: 400;
+  text-align: center;
+  margin: auto;
+}

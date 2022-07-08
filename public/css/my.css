@@ -1,0 +1,143 @@
+:root {
+  --text-color: #362121;
+  --background-color: #fff;
+  --light-blue-color: #91aaf2;
+  --dark-blue-color: #6b98f2;
+  --light-color: #f2b5a7;
+  --dark-color: #f28d8d;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--dark-color);
+  padding: 0.5rem 0.8rem;
+}
+
+.navbar_logo {
+  font-size: 1.5rem;
+  color: white;
+  width: 100%;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 1.5rem;
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 3px var(--text-color);
+  background-color: var(--background-color);
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intArea {
+  width: 400px;
+  position: relative;
+  margin-top: 20px;
+}
+.intArea:first-child {
+  margin-top: 0;
+}
+.intArea span {
+  position: absolute;
+  left: 10px;
+  top: -2px;
+  font-size: 13px;
+  color: #999;
+  transition: all 0.5s ease;
+}
+.intArea div {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #999;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+  text-align: left;
+}
+.intArea input {
+  width: 100%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #999;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+  text-align: left;
+}
+
+.btnArea {
+  margin-top: 30px;
+}
+.btnArea input {
+  width: 100%;
+  height: 50px;
+  background: var(--dark-blue-color);
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+}
+
+.footer {
+  padding: 2rem 15px;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.85);
+  min-height: 10rem;
+  max-width: 600px;
+}

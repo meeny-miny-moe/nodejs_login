@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <script defer src="../js/login.js"></script>
+    <!-- icon -->
+    <script>
+      src = "https://kit.fontawesome.com/5b7a7cfcb5.js";
+      crossorigin = "anonymous";
+    </script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>login page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar_logo"> &#127800;Blooming </a>
+    </nav>
+
+    <div class="container">
+      <div class="title">
+        <h1>로그인</h1>
+      </div>
+      <div class="content">
+        <!-- 기본 로그인 -->
+        <div class="basicLoginForm">
+          <form action="/session/login_process" method="post">
+            <!-- 이메일 -->
+            <div class="intArea">
+              <input type="text" name="email" id="email" autocomplete="off" />
+              <label for="email">이메일 계정</label>
+            </div>
+            <!-- 비밀번호 -->
+            <div class="intArea">
+              <input type="password" name="pw" id="pw" autocomplete="off" />
+              <label for="pw">비밀번호</label>
+            </div>
+            <!-- 에러 메시지 -->
+            <div class="errArea">
+              <span id="errMsg"></span>
+            </div>
+            <!-- 버튼 -->
+            <div class="btnArea">
+              <input type="submit" value="로그인" />
+            </div>
+          </form>
+        </div>
+
+        <!-- 회원가입 페이지 이동 -->
+        <div class="urlArea">
+          <a href="/register">회원가입</a>
+        </div>
+
+        <!-- 페이스북 로그인-->
+        <div class="urlArea">
+          <a href="/auth/facebook">페이스북으로 로그인</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="column">©WAP_WEB3</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,298 @@
+:root {
+  --text-color: #362121;
+  --background-color: #fff;
+  /* --primary-color: #ded0f2;
+  --primary-color-ch: #baa5da;
+  --light-blue-color: #91aaf2; */
+  --dark-blue-color: #6b98f2;
+  --light-color: #f2b5a7;
+  --dark-color: #f28d8d;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+}
+
+ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--dark-color);
+  padding: 0.5rem 0.8rem;
+}
+
+.navbar_side {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+.navbar_logo {
+  font-size: 1.5rem;
+  color: white;
+  width: 100%;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 0.5rem 0.8rem;
+}
+
+.navbar_menu input {
+  all: unset;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar_togglebtn {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar_togglebtn {
+    display: block;
+  }
+
+  .navbar_side {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar_menu {
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+  }
+
+  .navbar_menu li {
+    padding-left: 0;
+  }
+
+  .navbar_side.active {
+    display: flex;
+  }
+}
+
+.myMsg,
+.ans {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+#chatBox {
+  overflow: scroll;
+  overflow-x: hidden;
+  display: inline-block;
+  /* border: 1px solid black; */
+  height: 500px;
+  /* width: 400px; */
+
+  width: 600px;
+  border: 1px solid #ddd;
+}
+
+#chatBox::-webkit-scrollbar {
+  width: 5px;
+  background-color: white;
+  vertical-align: top;
+}
+
+#chatBox::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: gray;
+}
+
+.line {
+  width: 500px;
+  display: table-row;
+  vertical-align: middle;
+
+  /* display: flex;
+  align-items: flex-end;
+  margin-bottom: 5px;
+   text-align: left; */
+}
+
+.name {
+  margin-left: 12px;
+  margin-bottom: 3px;
+}
+
+.msg_box {
+  display: flex;
+  width: 300px;
+  text-align: right;
+  margin: 0 12px 5px 0;
+  justify-content: flex-end;
+  float: right;
+
+  /* flex-direction: row-reverse;
+    align-items: flex-end; */
+}
+
+.p_msg_box {
+  display: flex;
+  width: 300px;
+  text-align: left;
+  margin: 0 0 5px 12px;
+  justify-content: flex-start;
+  float: left;
+}
+
+.msg_border {
+  display: inline;
+  height: auto;
+  max-width: 450px;
+  /* border: 1px solid black; */
+  border-radius: 6px;
+
+  padding: 5px 10px;
+  margin-top: 5px;
+
+  /* display: inline-block;
+  border-radius: 15px;
+  padding: 7px 15px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  max-width: 80%; */
+}
+
+.p_msg_box > .msg_border {
+  background-color: #f1f0f0;
+}
+
+.msg_box > .msg_border {
+  background-color: var(--dark-blue-color);
+  color: #fff;
+}
+
+.myMsg {
+  word-break: break-all;
+  display: inline;
+  text-align: right;
+  height: auto;
+  width: auto;
+}
+
+.ans {
+  word-break: break-all;
+  display: inline;
+  text-align: left;
+  height: auto;
+  max-width: 440px;
+}
+
+.time {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 5px 0 5px;
+  font-size: 6px;
+}
+
+.chatHeader {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  font-weight: 900;
+  border-bottom: 1px solid #ddd;
+}
+
+#chatLog {
+  height: 700px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chatWrap {
+  width: 600px;
+  border: 1px solid #ddd;
+}
+
+.anotherMsg_box {
+  display: flex;
+  align-items: flex-end;
+}
+
+.p_msg_box {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.chatForm {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+}
+
+#chatInput {
+  width: 85%;
+  height: calc(100% - 1px);
+  border: none;
+  padding: 10px 50px 10px 15px;
+}
+
+#chatInput:focus {
+  outline: none;
+}
+
+#send_btn {
+  outline: none;
+  border: none;
+  background: none;
+  color: var(--dark-blue-color);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.content {
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}

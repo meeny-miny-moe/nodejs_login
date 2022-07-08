@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "idx": "WDPRmf5K-",
+      "email": "test@naver.com",
+      "pw": "$2b$10$ahLvYtKRZez9iOjw8Rmf2ea31p5wwbeaG7ZfqvTgpDC2yYkuNfRpy",
+      "displayName": "test1",
+      "room": "KF9-SmViW-WDPRmf5K-",
+      "idealPersonality": "1222223223",
+      "personality": "2122212142",
+      "partnerIdx": "KF9-SmViW",
+      "partnerName": "test2",
+      "gender": "Woman"
+    },
+    {
+      "idx": "KF9-SmViW",
+      "email": "test1@naver.com",
+      "pw": "$2b$10$GJuidI6BSCDZvu/1Nv.Tm.0blhvkzkmlf7/CO6jXAyW/aqjUW4Bcq",
+      "displayName": "test2",
+      "room": "KF9-SmViW-WDPRmf5K-",
+      "idealPersonality": "2121313342",
+      "personality": "1111211244",
+      "partnerIdx": "WDPRmf5K-",
+      "partnerName": "test1",
+      "gender": "Man"
+    }
+  ],
+  "files": [],
+  "msg": [
+    {
+      "room": "testRomm",
+      "person": "jq-hMIkyT",
+      "time": "16:22",
+      "msg": "123"
+    },
+    {
+      "room": "testRomm",
+      "person": "wM4clrdWu",
+      "time": "16:29",
+      "msg": "rㄱㄱㄱㄱ"
+    },
+    {
+      "room": "testRomm",
+      "person": "wM4clrdWu",
+      "time": "16:29",
+      "msg": "ㄱㄱㄱㄱㄱㄱㄱㄱ"
+    },
+    {
+      "room": "KF9-SmViW-WDPRmf5K-",
+      "person": "WDPRmf5K-",
+      "time": "01:10",
+      "msg": "123"
+    }
+  ]
+}

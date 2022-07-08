@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/join.css" />
+    <script defer src="../js/join.js"></script>
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/5b7a7cfcb5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Join page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar_logo"> &#127800;Blooming </a>
+    </nav>
+
+    <div class="container">
+      <div class="title">
+        <h1>회원가입</h1>
+      </div>
+      <div class="content">
+        <form action="/session/to_register" method="post">
+          <div class="intArea">
+            <input type="email" name="email" id="email" autocomplete="off" />
+            <label for="email">이메일 계정</label>
+            <div class="errMsg hide">유효한 이메일을 입력해주세요.</div>
+          </div>
+          <div class="intArea">
+            <input type="password" name="pw" id="pw" autocomplete="off" />
+            <label for="pw">비밀번호</label>
+            <div class="errMsg hide">비밀번호를 입력해주세요.</div>
+          </div>
+          <div class="intArea">
+            <input type="password" name="pw2" id="pw2" autocomplete="off" />
+            <label for="pw2">비밀번호 재입력</label>
+            <div class="errMsg hide">비밀번호가 일치하지 않습니다.</div>
+          </div>
+          <div class="intArea">
+            <input
+              type="text"
+              name="displayName"
+              id="displayName"
+              autocomplete="off"
+            />
+            <label for="displayName">이름</label>
+            <div class="errMsg hide">이름을 입력해주세요.</div>
+          </div>
+          <div class="radCheckbox">
+            <div class="radLabel">
+              <label for="genderMan">성별</label>
+            </div>
+            <div class="radFlexbox">
+              <div class="radArea">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="genderMan"
+                  value="Man"
+                  checked
+                />
+                <label for="Man">남자</label>
+              </div>
+              <div class="radArea">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="genderWoman"
+                  value="Woman"
+                />
+                <label for="Woman">여자</label>
+              </div>
+            </div>
+          </div>
+          <div class="btnArea">
+            <input type="submit" value="회원가입" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="column">©WAP_WEB3</div>
+    </footer>
+  </body>
+</html>

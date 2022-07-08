@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/5b7a7cfcb5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar_logo"> &#127800;Blooming </a>
+
+      <!-- <div class="navbar_side">
+        <ul class="navbar_menu">
+          <li><input type="button" value="매칭" id="matching" /></li>
+          <li><input type="button" value="마이페이지" id="my" /></li>
+          <li><input type="button" value="로그인" id="login" /></li>
+        </ul>
+      </div> -->
+
+      <a href="#" class="navbar_togglebtn">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </nav>
+
+    <div class="content">
+      <div class="chatWrap">
+        <h2 id="chatName" style="text-align: center"></h2>
+        <!-- 채팅이 표시되는 곳 -->
+        <div id="chatBox">
+          <div style="height: 5px"></div>
+        </div>
+        <div class="chatForm">
+          <!-- 입력하는 부분 & 전송 버튼 -->
+          <input
+            id="chatInput"
+            type="text"
+            class=""
+            autofocus
+            placeholder="대화를 입력해주세요."
+          />
+          <button id="send_btn" class="" style="padding-right: 15px">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- chat.js가 jQuery & socket.io를 사용하기 때문에 필요-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/chat.js"></script>
+  </body>
+</html>
